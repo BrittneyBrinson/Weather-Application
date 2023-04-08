@@ -1,8 +1,14 @@
-.loading-page {
-    position: center;
-    top: 0;
-    left: 0;
-    width: 100%;
+body, html{
     height: 100%;
-    z-index: 9999;
+    margin: 0;
+}
+
+.loading-page {
+    height: 100%;
+    background-image: url("/IMG/Weather-Loading.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
 }
