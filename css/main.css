@@ -1,0 +1,31 @@
+body, html{
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/img/weather-channel.svg");
+    transition: background-image 1s ease;
+
+}
+.video-container{
+    display:flex;
+    justify-content: center;
+    align-items: end;
+    height: 61%;
+}
+.glass-container{
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+}
+.glass-rectangle {
+    width: 380px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(255,255,255, 0.5);
+    border-radius: 10px;
+}
+

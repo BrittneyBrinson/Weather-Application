@@ -1,7 +1,9 @@
 setTimeout(function() {
-    document.body.style.backgroundImage = "url('/IMG/fake-data.svg')";
+    document.body.style.backgroundImage = "url('/IMG/basic-blue.svg')";
     document.getElementsByClassName('video-container')[0].style.display = 'none';
+    document.getElementsByClassName('glass-container')[0].style.display = 'flex';
 }, 8000);
+
 
 // the body element is initially set to have a background image of the loading page using the background-image property in CSS. The transition property is also used to add a smooth transition effect when the background image changes.
 //
