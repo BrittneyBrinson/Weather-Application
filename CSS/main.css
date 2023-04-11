@@ -1,19 +1,17 @@
 body, html{
+    background-size: cover;
     height: 100%;
     margin: 0;
-    background-image: url("/IMG/weather-channel.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    transition-delay: 5s;
-    transition-property: opacity;
+    background-image: url("/IMG/weather-channel.svg");
+    transition: background-image 1s ease;
+
 }
-body.fade {
-    opacity:0;
-}
-.container{
+.video-container{
     display:flex;
     justify-content: center;
     align-items: end;
     height: 61%;
 }
+
