@@ -32,4 +32,38 @@ body, html{
     display: flex;
     text-align: center;
 }
+.location-container {
+    display: none;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    /*background-color: rgba(255, 255, 255, 0.2);*/
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(255,255,255, 0.5);
+    border-radius: 10px;
+}
+/*.search-input {*/
+/*    background: transparent;*/
+/*    border: solid 1px #fff;*/
+/*    box-shadow: black 0 0 10px;*/
+/*    border-radius: 20px;*/
+/*}*/
+.transparent-input {
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #000;
+    border-radius: 20px;
+    color: #000;
+    outline: none;
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Drop shadow effect */
+}
+
+/* Style for input element on focus */
+.transparent-input:focus {
+    border-bottom: 2px solid #007bff; /* Change border color on focus */
+}
 
