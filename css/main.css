@@ -21,12 +21,13 @@ body, html{
     height: 600px;
 }
 .glass-rectangle {
-    width: 380px;
-    height: 400px;
+    margin-top: 20px;
+    width: 280px;
+    height: 570px;
     background-color: rgba(255, 255, 255, 0.2);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(255,255,255, 0.5);
-    border-radius: 10px;
+    border-radius: 50px;
 }
 .center-text {
     display: flex;
@@ -38,17 +39,10 @@ body, html{
     justify-content: center;
     align-items: center;
     height: 20%;
-    /*background-color: rgba(255, 255, 255, 0.2);*/
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(255,255,255, 0.5);
-    border-radius: 10px;
+    border-radius:60px;
 }
-/*.search-input {*/
-/*    background: transparent;*/
-/*    border: solid 1px #fff;*/
-/*    box-shadow: black 0 0 10px;*/
-/*    border-radius: 20px;*/
-/*}*/
 .transparent-input {
     border: none;
     background: transparent;
@@ -59,11 +53,39 @@ body, html{
     width: 200px;
     padding: 10px;
     font-size: 18px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Drop shadow effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Drop shadow effect */
 }
 
 /* Style for input element on focus */
 .transparent-input:focus {
     border-bottom: 2px solid #007bff; /* Change border color on focus */
 }
+.button-container {
+    display: none;
+    width: max-content;
+    overflow: clip;
+    position: static;
+    cursor: pointer;
+}
+
+/* Style for the button image */
+.button-container img {
+    width: auto;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.2s ease; /* Add transition for smooth hover effect */
+}
+
+/* Style for the button container on hover */
+.button-container:hover img {
+    transform: scale(1.05); /* Scale up the image on hover */
+    background-blend-mode: luminosity;
+}
+
+/* Style for the button container on active */
+.button-container:active img {
+    transform: translateY(2px); /* Add a slight vertical offset on click */
+}
+/*Weather reaction*/
+
 
