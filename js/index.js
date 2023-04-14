@@ -6,6 +6,7 @@ setTimeout(function() {
     // document.getElementsByClassName('navbar')[1].style.display = 'inline-block';
     // document.getElementsByClassName('button-container').style.display = 'inline-block';
     document.getElementsByClassName('search-container')[0].style.display = 'flex';
+    document.getElementsByClassName('link-bar')[0].style.display = 'flex';
 }, 3000);
 // the body element is initially set to have a background image of the loading page using the background-image property in CSS. The transition property is also used to add a smooth transition effect when the background image changes.
 //
@@ -26,3 +27,5 @@ setTimeout(function() {
 //     });
 // }
 // makeAjaxCall();
+//code to make the hamburger menu look like an X when clicked
+

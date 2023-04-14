@@ -77,7 +77,6 @@ body, html{
     height: 70px;
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(255,255,255, 0.5);
-    margin-bottom: 50px;
     padding: 0;
 }
 /*logo in navbar*/
@@ -151,6 +150,20 @@ input[type="text"]:focus::placeholder {
 /* Style for the button container on active */
 .button-container:active img {
     transform: translateY(2px); /* Add a slight vertical offset on click */
+}
+.link-bar {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 50px;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(10px);
+}
+a {
+    margin-right: 80px;
 }
 
 /*Weather reaction*/
