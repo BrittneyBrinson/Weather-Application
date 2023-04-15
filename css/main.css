@@ -4,15 +4,9 @@ body, html{
     margin: 0;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("/img/weather-channel.svg");
+    background-image: url("/img/loading-weather.svg");
     transition: background-image 1s ease-out;
 
-}
-.video-container{
-    display:flex;
-    justify-content: center;
-    align-items: end;
-    height: 61%;
 }
 .glass-container{
     display: none;
@@ -72,21 +66,26 @@ body, html{
 .navbar{
     display: none;
     background: transparent;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: end;
     height: 70px;
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px rgba(255,255,255, 0.5);
+    box-shadow: 0 0 10px rgba(0,0,0);
     padding: 0;
 }
 /*logo in navbar*/
 .image {
-    width: 200px;
-    max-height: 65px;
+    width: 800px;
+    border-left: 0;
+    padding:0;
+    max-height: 50px;
     object-fit: cover;
+    overflow: visible;
+
+
 }
 .image:hover {
-    -webkit-backdrop-filter: blur(5px);
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
 }
 .custom-link {
     font-family: "monospace", sans-serif;
@@ -97,38 +96,51 @@ body, html{
     border-bottom: 2px solid transparent;
     transition: border-bottom-color 0.3s ease-in-out;
 }
+.search-font {
+    font-family: "monospace", sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease-in-out;
+}
 .custom-link:hover {
     border-bottom-color: #fff;
+    box-shadow: black;
+    /*filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));*/
 }
 .custom-link:active {
     border-bottom-color: #fff;
 }
 .custom-link:visited {
-    border-bottom-color: transparent;
+    border-bottom-color: white;
 }
 /*do hover effect for individual elements in navbar*/
 .search-container {
     display: none;
+    border-left: 100px;
     justify-content: center;
 }
 .transparent-input {
     border: none;
+    margin-left: 90px;
     margin-bottom: 10px;
-    background: transparent;
-    border-bottom: 2px solid #000;
+    background: #0BD6FF;
+    border-bottom: 2px double #000;
     border-radius: 20px;
-    color: #000;
+    color: black;
     outline: none;
     width: 400px;
     padding: 10px;
     font-size: 18px;
-    box-shadow: 0 0 10px rgba(255,255,255, 0.5);
-    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); !* Drop shadow effect *!*/
+    box-shadow: 0 0 10px rgba(12, 12, 12, 0.5);
 }
 /*center and edit text inside input element*/
 input[type="text"]::placeholder {
     text-align: center;
-    color: #e3e1e1;
+    font-family: "Al Nile", sans-serif;
+    color: black;
     line-height: inherit;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
@@ -176,8 +188,8 @@ input[type="text"]:focus::placeholder {
     margin-top: 0;
     margin-bottom: 60px;
     width: 100%;
-    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
-    -webkit-backdrop-filter: blur(10px);
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+
 }
 a {
     margin-right: 80px;
