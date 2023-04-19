@@ -5,6 +5,9 @@
     <title>Channel 8 Weather</title>
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/index.js"></script>
+    <script src="../keys/api-keys.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script id="search-js" defer src="https://api.mapbox.com/search-js/v1.0.0-beta.14/web.js"></script>
 </head>
 <body>
 <div class="scroll-content">
@@ -14,10 +17,8 @@
             <img src="../img/final-logo.svg" alt="channel-logo" class="image">
         </a>
         <div class="search-container">
-                    <label>
-                        <input id="search-location" type="text" class="transparent-input search-font" placeholder="Search City or Zipcode">
+                        <input autocomplete="address-leve2" id="search-location" type="text" class="transparent-input search-font" placeholder="Search City or Zipcode">
                         <img src="../img/search-weather.png" alt="magnifying-glass" class="search-weather-icon">
-                    </label>
         </div>
     </div>
 <!--    link bar under the navbar-->
