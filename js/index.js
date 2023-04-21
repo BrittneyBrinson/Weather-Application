@@ -7,9 +7,6 @@ setTimeout(function() {
     document.getElementsByClassName('link-bar')[0].style.display = 'flex';
 }, 2000);
 
-// get the users input from the search bar
-// then use that input to make an ajax call to the api
-// then display the data on the page
 
 
 
