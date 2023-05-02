@@ -243,20 +243,7 @@ body, html{
     border-bottom-color: #e3e0e0;
 }
 /*Drop down for location results*/
-#dropdownInput {
-    width: 200px;
-    height: 30px;
-    border: 1px solid #ccc;
-    padding: 5px;
-}
-#dropdownOptions{
-    display: none;
-    position: absolute;
-    width: 200px;
-    border: 1px solid #ccc;
-    background-color: #232222;
-    z-index: 1;
-}
+
 /*do hover effect for individual elements in navbar*/
 .search-container {
     display: none;

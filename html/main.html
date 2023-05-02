@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/index.js"></script>
     <script src="../keys/api-keys.js"></script>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnzN6lByGGwpzLAClSyXdFiaKzrSzzfCE&libraries=places&callback=initAutocomplete"></script>
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnzN6lByGGwpzLAClSyXdFiaKzrSzzfCE&libraries=places&callback=initAutocomplete"></script>
 </head>
 <body>
 <div class="scroll-content">
@@ -17,12 +18,14 @@
         </a>
         <div class="search-container">
             <label>
-                        <input id="autocomplete" type="text" class="transparent-input search-font" placeholder="Search City or Zipcode">
+                <input id="autocomplete" type="text" class="transparent-input search-font"
+                       placeholder="Search City or Zipcode">
             </label>
-                        <img src="../img/search-weather.png" alt="magnifying-glass" class="search-weather-icon">
+            <select name="results" id="dropdown" size="5"></select>
+            <img src="../img/search-weather.png" alt="magnifying-glass" class="search-weather-icon">
         </div>
     </div>
-<!--    link bar under the navbar-->
+    <!--    link bar under the navbar-->
     <div class="link-bar">
         <a href="today-forecast.html" class="custom-link"><p>Today</p></a>
         <a href="hourly-forecast.html" class="custom-link"><p>Hourly</p></a>
@@ -32,9 +35,9 @@
     <div class="glass-container">
         <div class="main-column">
             <div class="glass-rectangle-alpha1">
-                        <div class="top-container">
-                            <h2 class="inner-text" id="user-input">Location info: Cloudy with a chance of meatballs</h2>
-                        </div>
+                <div class="top-container">
+                    <h2 class="inner-text" id="user-input">Location info: Cloudy with a chance of meatballs</h2>
+                </div>
             </div>
             <div class="glass-rectangle-alpha2">
             </div>
