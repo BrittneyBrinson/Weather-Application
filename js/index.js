@@ -5,7 +5,7 @@ setTimeout(function() {
     document.getElementsByClassName('navbar')[0].style.display = 'flex';
     document.getElementsByClassName('search-container')[0].style.display = 'inline-block';
     document.getElementsByClassName('link-bar')[0].style.display = 'flex';
-}, 2000);
+}, 3000);
 
 
 
@@ -25,4 +25,5 @@ function initAutocomplete() {
         });
 }
 initAutocomplete();
+
 
