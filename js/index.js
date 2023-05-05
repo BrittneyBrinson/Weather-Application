@@ -27,8 +27,12 @@ function initAutocomplete() {
 initAutocomplete();
 
 // Get the input field id #autocomplete and use conditional logic to check if the user has entered a value. If the user has entered a value, the value is stored in the variable city. If the user has not entered a value, the variable city is set to the default value of 'New York'.
-let citySearch = document.getElementById('autocomplete'); //user input
+let citySearch = document.getElementById("autocomplete"); //user input
 citySearch.addEventListener('keypress', function() { //keypress is used or keydown because it is triggered when the user presses a key on the keyboard and isn't triggered when the user clicks on the input field. A character must be entered for the event to be triggered.
 //attach the input element value to the select element, so that the user can select the city from the dropdown menu and the weather data will be displayed for the selected city.
+    let city = citySearch.value;
+    let dropdown = document.getElementById("dropdown");
+    dropdown.innerText = city;
+    //need to attach the results to a container aka a div under the input field
 });
 
