@@ -206,9 +206,6 @@ body, html{
     overflow: clip;
     z-index: 1;
 }
-.image:hover {
-    /*filter: drop-shadow(0 0 0.75rem rgb(239, 235, 235));*/
-}
 .custom-link {
     font-family: "monospace", sans-serif;
     color: #d7d4d4;
@@ -243,7 +240,6 @@ body, html{
     border-bottom-color: #e3e0e0;
 }
 /*Drop down for location results*/
-
 /*do hover effect for individual elements in navbar*/
 .search-container {
     display: none;
@@ -332,4 +328,32 @@ a {
 .weather-icon{
 
 }
+
+#myCombobox {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+#myListbox {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-top: 0;
+    padding-left: 0;
+    list-style-type: none;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+#myListbox li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#myListbox li:hover {
+    background-color: #eee;
+}
+
 
