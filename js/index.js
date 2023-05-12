@@ -10,28 +10,28 @@ setTimeout(function() {
 var combobox = document.getElementById('combobox');
 var listbox = document.getElementById('listbox');
 
-combobox.addEventListener('input', function() {
-    var input = this.value;
-    var options = listbox.getElementsByTagName('li');
-    for (var i = 0; i < options.length; i++) {
-        var option = options[i];
-
-        if(option.textContent.toLowerCase().indexOf(input.toLowerCase()) !== -1){
-            option.style.display = 'block';
-        }
-        else {
-            option.style.display = 'none';
-        }
-    }
-    listbox.setAttribute('aria-activeDescendant', '');
-});
-listbox.addEventListener('click', function(e) {
-    if(e.target && e.target.nodeName === 'LI') {
-        combobox.value = e.target.textContent;
-        listbox.style.display = 'none';
-        listbox.setAttribute('aria-activeDescendant', '');
-    }
-});
+// combobox.addEventListener('input', function() {
+//     var input = this.value;
+//     var options = listbox.getElementsByTagName('li');
+//     for (var i = 0; i < options.length; i++) {
+//         var option = options[i];
+//
+//         if(option.textContent.toLowerCase().indexOf(input.toLowerCase()) !== -1){
+//             option.style.display = 'block';
+//         }
+//         else {
+//             option.style.display = 'none';
+//         }
+//     }
+//     listbox.setAttribute('aria-activeDescendant', '');
+// });
+// listbox.addEventListener('click', function(e) {
+//     if(e.target && e.target.nodeName === 'LI') {
+//         combobox.value = e.target.textContent;
+//         listbox.style.display = 'none';
+//         listbox.setAttribute('aria-activeDescendant', '');
+//     }
+// });
 
 
 
