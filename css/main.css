@@ -191,7 +191,7 @@ body, html{
 .navbar{
     display: none;
     background: transparent;
-    justify-content: start;
+    justify-content: normal;
     align-items: center;
     height: 90px;
     -webkit-backdrop-filter: blur(10px);
@@ -243,17 +243,26 @@ body, html{
 /*do hover effect for individual elements in navbar*/
 .search-container {
     display: none;
-    justify-content: center;
-    position: relative;
-    margin-left: 180px;
+    flex-direction: row;
+    margin-left: 320px;
+    width: 20%;
 }
-.search-weather-icon {
-    width: 60px;
-    height: 50px;
-    object-fit: contain;
-    position: absolute;
-    /*margin-left: 20px;*/
+.search-button {
+    background: transparent;
+    border: solid 1px #eeeeee;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    border-radius: 20px;
+    color: #eeeeee;
+    width: 100px;
+    padding: 10px;
+    font-size: 18px;
 }
+.search-button:hover {
+    color: #2360e1;
+    cursor: pointer;
+}
+
 .search-font {
     font-family: "monospace", sans-serif;
     color: #d9d8d8;
@@ -294,16 +303,6 @@ input[type="text"]:focus::placeholder {
     border: solid 2px #d9d8d8;
     border-bottom: 2px solid #232222; /* Change border color on focus */
 }
-/* Style for the button container on hover */
-/*.button-container:hover img {*/
-/*    transform: scale(1.05); !* Scale up the image on hover *!*/
-/*    background-blend-mode: luminosity;*/
-/*}*/
-
-/* Style for the button container on active */
-/*.button-container:active img {*/
-/*    transform: translateY(2px); !* Add a slight vertical offset on click *!*/
-/*}*/
 a {
     text-decoration: none;
 }
@@ -325,35 +324,6 @@ a {
     font-family: "monospace", sans-serif;
 
 }
-.weather-icon{
 
-}
-
-#myCombobox {
-    width: 200px;
-    padding: 5px;
-    border: 1px solid #ccc;
-}
-
-#myListbox {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    margin-top: 0;
-    padding-left: 0;
-    list-style-type: none;
-    max-height: 200px;
-    overflow-y: scroll;
-}
-
-#myListbox li {
-    padding: 5px;
-    cursor: pointer;
-}
-
-#myListbox li:hover {
-    background-color: #eee;
-}
 
 

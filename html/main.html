@@ -6,8 +6,16 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/index.js"></script>
     <script src="../keys/api-keys.js"></script>
-<!--    <script async-->
-<!--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnzN6lByGGwpzLAClSyXdFiaKzrSzzfCE&libraries=places&callback=initAutocomplete"></script>-->
+    <script id="search-js" defer src="https://api.mapbox.com/search-js/v1.0.0-beta.16/web.js"></script>
+    <script>
+        const accessToken = mapbox_key;
+        const script = document.getElementById('search-js');
+        script.onload = function () {
+            mapboxsearch.autofill({
+                accessToken
+            });
+        };
+    </script>
 </head>
 <body>
 <div class="scroll-content">
@@ -17,12 +25,14 @@
             <img src="../img/final-logo.svg" alt="channel-logo" class="image">
         </a>
         <div class="search-container">
-            <label>
-                <input id="autocomplete" type="text" class="transparent-input search-font" aria-autocomplete="list" aria-expanded="false" role="combobox" data-active-option="item1"
-                       placeholder="Search City or Zipcode">
-            </label>
-            <img src="../img/search-weather.png" alt="magnifying-glass" class="search-weather-icon">
+            <mapbox-search-box
+                    id="search-box-api"
+                    access-token='pk.eyJ1IjoiYnJpdHRuZXliOTUiLCJhIjoiY2xpNjljN2E4MGFsNzNncWhvOThzMXV3OCJ9.LZQZFaVWU6tZ2slomuKxJQ'
+                    proximity="0,0"
+            >
+            </mapbox-search-box>
         </div>
+<!--        <button id="search-button" class="search-button">Search</button>-->
     </div>
     <!--    link bar under the navbar-->
     <div class="link-bar">
@@ -35,7 +45,7 @@
         <div class="main-column">
             <div class="glass-rectangle-alpha1">
                 <div class="top-container">
-                    <h2 class="inner-text" id="user-input">Location info: Cloudy with a chance of meatballs</h2>
+                    <h2 class="inner-text" id="display-search">Location: </h2>
                 </div>
             </div>
             <div class="glass-rectangle-alpha2">
