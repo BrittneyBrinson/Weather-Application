@@ -7,18 +7,33 @@ setTimeout(function() {
     document.getElementsByClassName('link-bar')[0].style.display = 'flex';
 }, 3000);
 
-const search = new MapboxSearchBox();
-search.accessToken = mapbox_key;
-search.addEventListener('suggest', (event) => {
-    const suggestions = event.detail.suggestions;
-});
-search.addEventListener('retrieve', (event) => {
-    const featureCollection = event.detail;
 
-    let locationDisplay = document.getElementById('display-search');
-    locationDisplay.innerText = featureCollection;
-    console.log(locationDisplay);
-});
+function getUserInput(){
+    let userInput = document.getElementById('search-box-api').value;
+    console.log(userInput)
+    let showLocation = document.getElementById('display-search');
+    showLocation.innerHTML = "Location: " + userInput;
+    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${userInput},&limit=5&appid=${weather_key}`)
+        .then(response => response.json())
+        .then(data => {
+            // Process the response data
+
+            console.log(data[0].lat)
+            console.log(data[0].lon);
+    })
+        .catch(error => {
+            // Handle any errors
+            console.error(error);
+        });
+
+}
+
+
+
+
+
+
+
 
 
 
