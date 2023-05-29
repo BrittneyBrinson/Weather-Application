@@ -17,6 +17,7 @@ function getUserInput(){
         .then(response => response.json())
         .then(data => {
             // Process the response data
+            // I need another fetch request using the long and lat from the first fetch request
 
             console.log(data[0].lat)
             console.log(data[0].lon);
