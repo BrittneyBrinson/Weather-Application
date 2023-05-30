@@ -16,6 +16,7 @@
             });
         };
     </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="scroll-content">
@@ -43,10 +44,14 @@
     </div>
     <div class="glass-container">
         <div class="main-column">
-            <div class="glass-rectangle-alpha1">
+            <div class="glass-rectangle-alpha1" id="weather-background">
                 <div class="top-container">
-                    <h2 class="inner-text" id="display-search">Location: </h2>
+                    <h2 class="inner-text" id="location-name">Location: </h2>
                 </div>
+                <p id="temp" class="weather-text"></p>
+                <p id="cloudy-or-not"></p>
+                <p id="high-temp"></p>
+                <p id="low-temp"></p>
             </div>
             <div class="glass-rectangle-alpha2">
             </div>
