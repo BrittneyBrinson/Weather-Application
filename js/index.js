@@ -39,17 +39,22 @@ function getUserInput() {
 
 
             showTemp.innerHTML = "Currently: " + tempF + "°F";
-            showCloudyOrNot.innerHTML = cloudyOrNot;
-            showHighTemp.innerHTML = "High: " + highTempF + "°F";
+            showCloudyOrNot.innerHTML ="Weather: " + cloudyOrNot;
+            showHighTemp.innerHTML = "High: " + highTempF + "°F  ";
             showLowTemp.innerHTML = "Low: " + lowTempF + "°F";
 
 
             let weatherBackground = document.getElementById('weather-background');
+            let rightColWeather = document.getElementById('right-col-weather');
             //section for if statements to change background image and icon based on weather
             if (cloudyOrNot === "Clouds"){
                 weatherBackground.style.backgroundImage = "url('/IMG/cloudy.svg')";
                 weatherBackground.style.backgroundSize = "cover";
+                rightColWeather.style.backgroundImage = "url('/IMG/cloudy-icon.svg')";
+                rightColWeather.style.backgroundSize = "cover";
+
             }
+
         })
         .catch(error => {
             // Handle any errors
