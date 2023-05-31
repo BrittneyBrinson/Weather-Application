@@ -11,7 +11,7 @@ setTimeout(function () {
 function getUserInput() {
     let userInput = document.getElementById('search-box-api').value;
     let showLocation = document.getElementById('location-name');
-    showLocation.innerHTML = "Location: " + userInput.toUpperCase();
+    showLocation.innerHTML = userInput.charAt(0).toUpperCase() + userInput.slice(1);
     fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${userInput},&limit=5&appid=${weather_key}`)
         .then(response => response.json())
         .then(data => {
@@ -38,8 +38,9 @@ function getUserInput() {
             let showLowTemp = document.getElementById('low-temp');
 
 
-            showTemp.innerHTML = "Currently: " + tempF + "°F";
-            showCloudyOrNot.innerHTML ="Weather: " + cloudyOrNot;
+            showTemp.innerHTML = "Now: " + tempF + "°F";
+            showTemp.style.textDecoration = "underline";
+            showCloudyOrNot.innerHTML = cloudyOrNot;
             showHighTemp.innerHTML = "High: " + highTempF + "°F  ";
             showLowTemp.innerHTML = "Low: " + lowTempF + "°F";
 
@@ -52,7 +53,12 @@ function getUserInput() {
                 weatherBackground.style.backgroundSize = "cover";
                 rightColWeather.style.backgroundImage = "url('/IMG/cloudy-icon.svg')";
                 rightColWeather.style.backgroundSize = "cover";
-
+            }
+            else if (cloudyOrNot === "Clear"){
+                weatherBackground.style.backgroundImage = "url('/IMG/clear.svg')";
+                weatherBackground.style.backgroundSize = "cover";
+                rightColWeather.style.backgroundImage = "url('/IMG/sunny.svg')";
+                rightColWeather.style.backgroundSize = "cover";
             }
 
         })
