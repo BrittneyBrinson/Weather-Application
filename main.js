@@ -1,5 +1,5 @@
 setTimeout(function () {
-    document.body.style.backgroundImage = "url('/IMG/ombre-blue.svg')";
+    document.body.style.backgroundImage = "url('./img/ombre-blue.svg')";
     document.getElementsByClassName('glass-container')[0].style.display = 'flex';
 
     document.getElementsByClassName('navbar')[0].style.display = 'flex';
@@ -11,7 +11,7 @@ function getUserInput() {
     let userInput = document.getElementById('search-box-api').value;
     let showLocation = document.getElementById('location-name');
     showLocation.innerHTML = "Weather Location: " + userInput.charAt(0).toUpperCase() + userInput.slice(1);
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${userInput},&limit=5&appid=${weather_key}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${userInput},&limit=5&appid=${weather_key}`)
         .then(response => response.json())
         .then(data => {
             let lat = data[0].lat;
@@ -103,23 +103,23 @@ function getUserInput() {
 
             //section for if statements to change background image and icon based on weather
             if (cloudyOrNot === "Clouds"){
-                weatherBackground.style.backgroundImage = "url('/IMG/cloudy-background.svg')";
+                weatherBackground.style.backgroundImage = "url('./img/cloudy-background.svg')";
                 weatherBackground.style.backgroundSize = "cover";
-                rightColWeather.style.backgroundImage = "url('/IMG/cloudy-icon.svg')";
+                rightColWeather.style.backgroundImage = "url('./img/cloudy-icon.svg')";
                 rightColWeather.style.backgroundSize = "cover";
             }
             else if (cloudyOrNot === "Clear"){
-                weatherBackground.style.backgroundImage = "url('/IMG/clear-background.svg')";
+                weatherBackground.style.backgroundImage = "url('./img/clear-background.svg')";
                 weatherBackground.style.backgroundSize = "cover";
-                rightColWeather.style.backgroundImage = "url('/IMG/sunrise-icon.svg')";
+                rightColWeather.style.backgroundImage = "url('./img/sunrise-icon.svg')";
                 rightColWeather.style.backgroundSize = "cover";
             }
             else if (cloudyOrNot === "Haze"){
-                weatherBackground.style.backgroundImage = "url('/IMG/haze-background.svg')";
+                weatherBackground.style.backgroundImage = "url('./img/haze-background.svg')";
                 weatherBackground.style.backgroundSize = "cover";
             }
             else if (cloudyOrNot === "Smoke"){
-                weatherBackground.style.backgroundImage = "url('/IMG/haze-background.svg')";
+                weatherBackground.style.backgroundImage = "url('./img/haze-background.svg')";
                 weatherBackground.style.backgroundSize = "cover";
             }
         })
