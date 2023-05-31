@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Channel 8 Weather</title>
     <link rel="stylesheet" href="../css/main.css">
-    <script src="../js/index.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../keys/api-keys.js"></script>
     <script id="search-js" defer src="https://api.mapbox.com/search-js/v1.0.0-beta.16/web.js"></script>
     <script>
@@ -38,20 +38,18 @@
     </div>
     <!--    link bar under the navbar-->
     <div class="link-bar">
-        <a href="today-forecast.html" class="custom-link"><p>Today</p></a>
-        <a href="hourly-forecast.html" class="custom-link"><p>Hourly</p></a>
-        <a href="weekend-forecast.html" class="custom-link"><p>Weekend</p></a>
-        <a href="ten-day-forecast.html" class="custom-link"><p>10 Day</p></a>
+        <h2 class="inner-text" id="location-name"></h2>
     </div>
     <div class="glass-container">
         <div class="main-column">
             <div class="glass-rectangle-alpha1" id="weather-background">
                 <div class="top-container">
-                    <h2 class="inner-text" id="location-name">Location: </h2>
-                    <h2 class="inner-text" id="cloudy-or-not"></h2>
+                    <p id="temp" class="now-weather"></p>
+                    <p id="cloudy-or-not" class="time-text"></p>
                 </div>
                 <div id="weather-info">
-                    <p id="temp" class="weather-text"></p>
+
+                    <h2 id="time" class="time-text"></h2>
                     <div class="inline-text">
                         <p id="high-temp" class="weather-text"></p>
                         <p id="low-temp" class="weather-text"></p>
@@ -59,21 +57,29 @@
                 </div>
             </div>
             <div class="glass-rectangle-alpha2">
-                stuff
+                <h2 id="real-feel" class="time-text"></h2>
+                <h2 id="wind-speed" class="time-text"></h2>
+                <h2 id="visibility" class="time-text"></h2>
+
             </div>
         </div>
         <div class="right-side-column">
             <div class="glass-rectangle-bravo" id="right-col-weather">
-
+                <div class="top-container-sunrise">
+                    <h2 class="inner-text" id="sunrise"> </h2>
+                </div>
+                <div class="bottom-container">
+                    <h2 class="inner-text" id="sunset"></h2>
+                </div>
             </div>
-            <div class="glass-rectangle-charlie">
-                <img src="" alt="">
+            <div class="glass-rectangle-charlie" id="humidity-background">
+                <div class="top-container-sunrise">
+                    <h2 class="inner-text" id="humidity"> </h2>
+                </div>
+                <div class="bottom-container">
+                    <h2 class="inner-text" id="pressure"></h2>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="glass-container-delta">
-        <div class="glass-rectangle-delta">
-            <h1>Stuff</h1>
         </div>
     </div>
 </div>
