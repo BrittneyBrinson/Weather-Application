@@ -4,7 +4,7 @@ body, html {
     margin: 0;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("./img/loading-weatherv2.png");
+    background-image: url("./img/loadingV2.svg");
     transition: background-image 1s ease-out;
 }
 
